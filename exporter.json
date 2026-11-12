@@ -1,0 +1,70 @@
+{
+  "id": "io.rct10880.spacer-exporter",
+  "name": "RCT-10880 spacer",
+  "description": "Fixture documentation exporter whose custom block declares a default variant.",
+  "author": "QA",
+  "organization": "Supernova",
+  "source_dir": "src",
+  "version": "1.0.0",
+  "usesBrands": false,
+  "type": "documentation",
+  "routing": "2",
+  "tags": ["Documentation"],
+  "contributes": {
+    "blocks": [
+      {
+        "key": "io.rct10880.spacer",
+        "category": "Layout",
+        "title": "Spacer",
+        "description": "Vertical space between blocks",
+        "mode": "block",
+        "properties": [
+          { "key": "note", "type": "string", "label": "Note", "default": "" }
+        ]
+      },
+      {
+        "key": "io.rct10880.marker",
+        "category": "Layout",
+        "title": "Marker",
+        "description": "Block whose variants do not use the default key",
+        "mode": "block",
+        "properties": []
+      }
+    ],
+    "blockVariants": {
+      "io.rct10880.spacer": [
+        {
+          "key": "default",
+          "name": "MD",
+          "description": "Medium spacing",
+          "thumbnail": "thumbnails/spacer-md.png",
+          "isDefault": true
+        },
+        {
+          "key": "sm",
+          "name": "SM",
+          "description": "Small spacing",
+          "isDefault": false
+        },
+        {
+          "key": "lg",
+          "name": "LG",
+          "isDefault": false
+        }
+      ],
+      "io.rct10880.marker": [
+        {
+          "key": "sm",
+          "name": "SM",
+          "description": "Small marker",
+          "isDefault": true
+        },
+        {
+          "key": "lg",
+          "name": "LG",
+          "isDefault": false
+        }
+      ]
+    }
+  }
+}
